@@ -32,13 +32,14 @@ class App extends Component {
     return (
       <div className="Header">
         <p className="ptag">
-          TIMER SINCE LAST MOUNT : {this.state.count} seconds
+          TIME SINCE LAST MOUNT : {this.state.count} seconds
         </p>
         <button className="button-53" onClick={this.toggleShow}>
           {this.state.isShow ? "HIDE" : "SHOW"}
         </button>
         {this.state.isShow ? (
           <div className="profile">
+            <img src={this.state.user.imgSrc} alt={this.state.user.fullName} />
             <h1>
               <span>NAME: </span>
               {this.state.user.fullName}
@@ -51,7 +52,6 @@ class App extends Component {
               <span>PROFESSION: </span>
               {this.state.user.profession}
             </p>
-            <img src={this.state.user.imgSrc} alt={this.state.user.fullName} />
           </div>
         ) : (
           <></>
